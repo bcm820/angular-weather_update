@@ -1,3 +1,19 @@
-<p>
-  city works!
-</p>
+
+<h1 class=text-center>{{name}}</h1>
+<hr>
+<div class=col-sm-6>
+  <strong>Humidity</strong>: {{humidity}}<br>
+  <strong>Temperature (Average)</strong>: {{avgtemp}}<br>
+  <strong>Temperature (High)</strong>: {{hightemp}}<br>
+  <strong>Temperature (Low)</strong>: {{lowtemp}}<br>
+  <strong>Status</strong>: {{description}}
+</div>
+
+<div class=col-sm-6>
+  <img *ngIf="name === 'McLean'" src="/assets/dc.jpg">
+  <img *ngIf="name === 'Chicago'" src="/assets/chicago.jpg">
+  <img *ngIf="name === 'Dallas'" src="/assets/dallas.jpg">
+  <img *ngIf="name === 'Burbank'" src="/assets/burbank.jpg">
+  <img *ngIf="name === 'San Jose'" src="/assets/sanjose.jpeg">
+  <img *ngIf="name === 'Seattle'" src="/assets/seattle.jpg">
+</div>
