@@ -31,12 +31,11 @@ export class CityComponent implements OnInit {
   }
 
   updateCity(data){
-    console.log(data);
     this.name = data.name;
     this.humidity = data.main.humidity;
-    this.avgtemp = data.main.temp;
-    this.hightemp = data.main.temp_max;
-    this.lowtemp = data.main.temp_min;
+    this.avgtemp = Math.floor(data.main.temp * (9/5) - 459.67); 
+    this.hightemp = Math.floor(data.main.temp_max * (9/5) - 459.67); 
+    this.lowtemp = Math.floor(data.main.temp_min * (9/5) - 459.67); 
     this.description = data.weather[0].description;
   }
 
